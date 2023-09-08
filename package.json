@@ -1,0 +1,25 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm:watch:sass\" \"npm:watch:coffee\" \"npm:server\"",
+    "server": "lite-server",
+    "compile:sass": "sass src/style/main.scss dist/main.css",
+    "watch:sass": "sass --watch src/style/main.scss dist/main.css",
+    "compile:coffee": "coffee -c -o dist/ src/js/",
+    "watch:coffee": "coffee -cw -o dist/ src/js/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "lite-server": "^2.6.1",
+    "sass": "^1.66.1"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

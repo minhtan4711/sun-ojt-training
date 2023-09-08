@@ -1,0 +1,11 @@
+{
+    "server": {
+      "baseDir": "./src/html",
+      "routes": {
+        "/node_modules": "node_modules",
+        "/dist": "dist",
+        "/src": "src"
+      }
+    },
+    "files": ["./src/html/**/*", "./dist/**/*"]
+}
