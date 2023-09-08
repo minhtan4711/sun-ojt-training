@@ -1,11 +1,6 @@
-/* file import */
 @import 'variables';
 @import 'mixins';
 
 body {
     font-family: $fonts;
-    background-color: $primary-color;
-    padding: $spacing;
-    min-height: 100vh;
-    @include flex-center();
 }
