@@ -28,9 +28,7 @@ body {
 	background-color: $primary-color;
 
 	&__content {
-		width: 71%;
-		height: fit-content;
-		margin: auto;
+		@include content-wrapper;
 
 		&-navigation {
 			display: flex;
@@ -113,8 +111,7 @@ body {
 				}
 
 				&-sub-title {
-					line-height: 30px;
-					color: $inactive-text-color;
+					@include sub-title($sub-title-main-color);
 				}
 
 				&-button {
@@ -161,6 +158,132 @@ body {
 					width: 780px;
 					height: 560px;
 					z-index: 1;
+				}
+			}
+		}
+	}
+}
+
+.middle {
+	padding-top: 6rem;
+	background-color: #eff2f1;
+
+	&__content {
+		@include content-wrapper;
+
+		&-product {
+			display: flex;
+			justify-content: space-between;
+
+			&-left {
+				width: 25%;
+
+				&-title {
+					font-size: 2rem;
+					font-weight: 450;
+					line-height: 1.2;
+					color: $text-color;
+					margin-bottom: 1.5rem;
+				}
+
+				&-sub-title {
+					@include sub-title($sub-title-secondary-color);
+				}
+
+				&-button {
+					&-explore {
+						margin-top: 1.5rem;
+						@include third-button;
+
+						&:hover {
+							background-color: #212529;
+						}
+					}
+				}
+			}
+
+			&-right {
+				width: 70%;
+				display: flex;
+				justify-content: space-between;
+
+				&-overview {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+					justify-content: center;
+					align-items: center;
+					width: 30%;
+					height: fit-content;
+
+					& > * {
+						position: relative;
+						z-index: 1;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						border-radius: 10px;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						height: 0;
+						background-color: $shadow-color;
+						transition: height 0.3s ease;
+						z-index: 0;
+					}
+
+					&:hover {
+						&::before {
+							height: 60%;
+						}
+
+						&-image {
+							transform: translateY(-10px);
+							transition: transform 0.3s ease;
+						}
+					}
+
+					&-title {
+						font-weight: 500;
+						line-height: 1.2;
+						color: $text-color;
+					}
+
+					&-price {
+						font-weight: 600;
+						font-size: 18px;
+						line-height: 1.2;
+						color: $text-color;
+						margin-top: 1.2rem;
+					}
+
+					&-price {
+						display: block;
+						text-align: center;
+					}
+
+					&-image {
+						width: 306px !important;
+						height: 306px !important;
+
+						transition: transform 0.3s ease;
+						&:hover {
+							transform: translateY(-20px);
+						}
+					}
+
+					&-icon {
+						display: grid;
+						place-items: center;
+						width: 35px;
+						height: 35px;
+						border-radius: 50%;
+						background-color: $button-text-primary-color;
+						visibility: hidden;
+					}
 				}
 			}
 		}
