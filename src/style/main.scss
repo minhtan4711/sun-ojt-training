@@ -1,6 +1,168 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
+
+@keyframes slideLeftToRight {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
 
 body {
-    font-family: $fonts;
+	width: 100%;
+	margin: auto !important;
+	line-height: 28px;
+	font-family: $fonts;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.head {
+	background-color: $primary-color;
+
+	&__content {
+		width: 71%;
+		height: fit-content;
+		margin: auto;
+
+		&-navigation {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 25%;
+
+			&-logo {
+				@include logo;
+				cursor: pointer;
+
+				span {
+					opacity: 0.4;
+				}
+			}
+
+			&-menu {
+				@include flex-center;
+				gap: 2.5rem;
+				color: $inactive-text-color;
+				cursor: pointer;
+
+				&-item {
+					position: relative;
+
+					&.active,
+					&:hover {
+						color: white;
+					}
+
+					&.active::after,
+					&:hover::after {
+						content: "";
+						position: absolute;
+						bottom: -10px;
+						left: 0;
+						height: 5px;
+						background-color: $active-bar-color;
+						width: 100%;
+					}
+
+					&:hover::after {
+						animation: slideLeftToRight 0.5s ease-in-out;
+					}
+
+					&.active:hover::after {
+						animation: none;
+					}
+				}
+
+				&-icon {
+					margin-left: 3rem;
+
+					&--user {
+						@include icon;
+						margin-right: 2rem;
+					}
+
+					&--cart {
+						@include icon;
+					}
+				}
+			}
+		}
+
+		&-introduce {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 4rem;
+
+			&-left {
+				flex-grow: 1;
+
+				&-title {
+					font-size: 60px;
+					font-weight: 700;
+					line-height: 80px;
+					color: #ffffff;
+					margin-bottom: 30px;
+				}
+
+				&-sub-title {
+					line-height: 30px;
+					color: $inactive-text-color;
+				}
+
+				&-button {
+					margin-top: 1.5rem;
+
+					&-shop {
+						@include primary-button;
+						margin-right: 1rem;
+
+						&:hover {
+							background-color: #f8b810;
+						}
+					}
+
+					&-explore {
+						@include secondary-button;
+
+						&:hover {
+							border-color: #fff;
+						}
+					}
+				}
+			}
+
+			&-right {
+				flex-grow: 2;
+				position: relative;
+
+				&::after {
+					position: absolute;
+					content: "";
+					background-image: url("../assets/images/dots-light.svg");
+					background-size: contain;
+					background-repeat: no-repeat;
+					width: 255px;
+					height: 217px;
+					top: 40px;
+					right: -70px;
+					z-index: 0;
+				}
+
+				&-couch {
+					position: relative;
+					width: 780px;
+					height: 560px;
+					z-index: 1;
+				}
+			}
+		}
+	}
 }

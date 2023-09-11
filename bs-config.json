@@ -1,11 +1,15 @@
 {
-    "server": {
-      "baseDir": "./src/html",
-      "routes": {
-        "/node_modules": "node_modules",
-        "/dist": "dist",
-        "/src": "src"
-      }
-    },
-    "files": ["./src/html/**/*", "./dist/**/*"]
+  "server": {
+    "baseDir": "./src/html",
+    "routes": {
+      "/node_modules": "node_modules",
+      "/dist": "dist",
+      "/src": "src",
+      "/assets": "src/assets"
+    }
+  },
+  "files": [
+    "./src/html/**/*",
+    "./dist/**/*"
+  ]
 }
