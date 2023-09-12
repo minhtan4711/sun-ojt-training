@@ -378,5 +378,122 @@ body {
 				}
 			}
 		}
+
+		&-benefit {
+			margin-top: 12rem;
+			display: flex;
+			justify-content: space-between;
+			gap: 3rem;
+
+			&-left {
+				width: 60%;
+				// flex-grow: 2;
+				position: relative;
+				display: grid;
+				grid-template-columns: repeat(27, 1fr);
+
+				&::before {
+					position: absolute;
+					content: "";
+					width: 255px;
+					height: 217px;
+					background-image: url("../assets/images/dots-green.svg");
+					background-repeat: no-repeat;
+					background-size: contain;
+					transform: translate(-40%, -40%);
+					z-index: 0;
+				}
+
+				& > * {
+					z-index: 1;
+				}
+
+				&-image-first {
+					grid-column: 1 / span 18;
+					grid-row: 1 / span 27;
+
+					img {
+						width: 100%;
+						border-radius: 20px;
+					}
+				}
+
+				&-image-second {
+					grid-column: 19 / span 27;
+					grid-row: 1 / span 5;
+					padding-left: 20px;
+
+					img {
+						width: 100%;
+						border-radius: 20px;
+					}
+				}
+
+				&-image-third {
+					grid-column: 14 / span 16;
+					grid-row: 6 / span 27;
+					padding-top: 20px;
+
+					img {
+						width: 100%;
+						border-radius: 20px;
+					}
+				}
+			}
+
+			&-right {
+				width: 40%;
+
+				&-title {
+					&--big {
+						@include title($text-color);
+						margin-bottom: 1rem;
+					}
+
+					&--small {
+						@include sub-title($sub-title-secondary-color);
+					}
+				}
+
+				&-item {
+					list-style: none;
+					margin: 1.5rem 0;
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 1.5rem;
+
+					li {
+						position: relative;
+						line-height: 1.5;
+						width: 80%;
+						cursor: auto;
+						font-size: 14px;
+						color: $sub-title-secondary-color;
+
+						&::before {
+							content: "";
+							width: 8px;
+							height: 8px;
+							border-radius: 50%;
+							border: 2px solid #3b5d50;
+							position: absolute;
+							left: -24px;
+							top: 8px;
+						}
+					}
+				}
+
+				&-button {
+					&-explore {
+						@include third-button;
+						margin-top: 1.5rem;
+
+						&:hover {
+							background-color: #212529;
+						}
+					}
+				}
+			}
+		}
 	}
 }
