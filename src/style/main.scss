@@ -556,5 +556,58 @@ body {
 				}
 			}
 		}
+
+		&-slide {
+			width: 100%;
+			margin-top: 10rem;
+
+			h2 {
+				text-align: center;
+			}
+
+			&-carousel {
+				width: 100%;
+
+				&-control-prev {
+					position: relative;
+					justify-content: flex-start !important;
+
+					&-icon {
+						color: #3b5d50 !important;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						width: 50px;
+						height: 50px;
+						background-color: rgba(59, 93, 80, 0.1);
+						border-radius: 50%;
+						left: -8px;
+						top: 50%;
+						transform: translateY(-50%);
+						z-index: 1;
+					}
+				}
+
+				&-control-next {
+					position: relative;
+					justify-content: flex-end !important;
+
+					&::before {
+						content: "";
+						position: absolute;
+						width: 50px;
+						height: 50px;
+						background-color: rgba(59, 93, 80, 0.1);
+						border-radius: 50%;
+						left: 78%;
+						top: 50%;
+						transform: translateY(-50%);
+						z-index: 1;
+					}
+				}
+			}
+		}
 	}
 }

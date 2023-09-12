@@ -7,9 +7,12 @@
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
-			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-			crossorigin="anonymous"
 		/>
+		<link
+			href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 		<script src="./dist/index.js"></script>
 		<title>Home</title>
@@ -346,7 +349,136 @@
 							</div>
 						</div>
 					</div>
-					<div class="middle__content-slide"></div>
+					<div class="middle__content-slide">
+						<h2>Testimonials</h2>
+						<div
+							id="carouselExampleCaptions"
+							class="middle__content-slide-carousel carousel slide"
+						>
+							<div
+								class="middle__content-slide-carousel-indicators carousel-indicators"
+							>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleCaptions"
+									data-bs-slide-to="0"
+									class="active"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleCaptions"
+									data-bs-slide-to="1"
+									aria-label="Slide 2"
+									class=""
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleCaptions"
+									data-bs-slide-to="2"
+									aria-label="Slide 3"
+									class=""
+									aria-current="true"
+								></button>
+							</div>
+							<div class="middle__content-slide-carousel-inner carousel-inner">
+								<div
+									class="middle__content-slide-carousel-inner-item carousel-item active"
+								>
+									<svg
+										class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+										width="800"
+										height="400"
+										xmlns="http://www.w3.org/2000/svg"
+										role="img"
+										aria-label="Placeholder: First slide"
+										preserveAspectRatio="xMidYMid slice"
+										focusable="false"
+									>
+										<text x="50%" y="50%" fill="#555" dy=".3em">Hello</text>
+									</svg>
+									<div class="carousel-caption d-md-block">
+										<h5>First slide label asdf</h5>
+										<p>
+											Some representative placeholder content for the first
+											slide.
+										</p>
+									</div>
+								</div>
+								<div
+									class="middle__content-slide-carousel-inner-item carousel-item"
+								>
+									<svg
+										class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+										width="800"
+										height="400"
+										xmlns="http://www.w3.org/2000/svg"
+										role="img"
+										aria-label="Placeholder: Second slide"
+										preserveAspectRatio="xMidYMid slice"
+										focusable="false"
+									>
+										<text x="50%" y="50%" fill="#444" dy=".3em">
+											Second slide
+										</text>
+									</svg>
+									<div class="carousel-caption d-md-block">
+										<h5>Second slide label</h5>
+										<p>
+											Some representative placeholder content for the second
+											slide.
+										</p>
+									</div>
+								</div>
+								<div
+									class="middle__content-slide-carousel-inner-item carousel-item"
+								>
+									<svg
+										class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+										width="800"
+										height="400"
+										xmlns="http://www.w3.org/2000/svg"
+										role="img"
+										aria-label="Placeholder: Third slide"
+										preserveAspectRatio="xMidYMid slice"
+										focusable="false"
+									>
+										<text x="50%" y="50%" fill="#333" dy=".3em">
+											Third slide
+										</text>
+									</svg>
+									<div class="carousel-caption d-md-block">
+										<h5>Third slide label</h5>
+										<p>
+											Some representative placeholder content for the third
+											slide.
+										</p>
+									</div>
+								</div>
+							</div>
+							<button
+								class="middle__content-slide-carousel-control-prev carousel-control-prev"
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide="prev"
+							>
+								<span
+									class="middle__content-slide-carousel-control-prev-icon carousel-control-icon carousel-control-prev-icon"
+								></span>
+							</button>
+							<button
+								class="middle__content-slide-carousel-control-next carousel-control-next"
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide="next"
+							>
+								<span
+									class="middle__content-slide-carousel-control-next-icon carousel-control-icon carousel-control-next-icon"
+								></span>
+							</button>
+						</div>
+					</div>
+
 					<div class="middle__content-blog"></div>
 				</div>
 			</div>
