@@ -17,6 +17,7 @@ body {
 	font-family: $fonts;
 	font-weight: 400;
 	font-size: 14px;
+	padding-bottom: 5rem;
 }
 
 .wrapper {
@@ -192,8 +193,8 @@ body {
 
 				&-button {
 					&-explore {
-						margin-top: 1.5rem;
 						@include third-button;
+						margin-top: 1.5rem;
 
 						&:hover {
 							background-color: #212529;
@@ -216,10 +217,26 @@ body {
 					align-items: center;
 					width: 30%;
 					height: fit-content;
+					padding-bottom: 2rem;
+					cursor: pointer;
 
 					& > * {
-						position: relative;
 						z-index: 1;
+					}
+
+					&:hover {
+						&::before {
+							height: 68%;
+						}
+
+						.middle__content-product-right-overview-icon {
+							opacity: 1;
+							transform: translateY(0);
+						}
+
+						.middle__content-product-right-overview-image {
+							transform: translateY(-20px);
+						}
 					}
 
 					&::before {
@@ -233,17 +250,6 @@ body {
 						background-color: $shadow-color;
 						transition: height 0.3s ease;
 						z-index: 0;
-					}
-
-					&:hover {
-						&::before {
-							height: 60%;
-						}
-
-						&-image {
-							transform: translateY(-10px);
-							transition: transform 0.3s ease;
-						}
 					}
 
 					&-title {
@@ -267,7 +273,7 @@ body {
 
 					&-image {
 						width: 306px !important;
-						height: 306px !important;
+						height: 100% !important;
 
 						transition: transform 0.3s ease;
 						&:hover {
@@ -276,13 +282,18 @@ body {
 					}
 
 					&-icon {
+						z-index: 2;
+						position: absolute;
+						bottom: -4%;
+						transform: translateY(-30px);
 						display: grid;
 						place-items: center;
 						width: 35px;
 						height: 35px;
 						border-radius: 50%;
 						background-color: $button-text-primary-color;
-						visibility: hidden;
+						opacity: 0;
+						transition: transform 0.3s ease, opacity 0.3s ease;
 					}
 				}
 			}
