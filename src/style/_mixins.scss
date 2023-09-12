@@ -12,6 +12,13 @@
 	margin: auto;
 }
 
+@mixin title($color) {
+	font-size: 2rem;
+	font-weight: 450;
+	line-height: 1.2;
+	color: $color;
+}
+
 @mixin sub-title($color) {
 	color: $color;
 	font-size: 14px;
