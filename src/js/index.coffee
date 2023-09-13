@@ -35,4 +35,4 @@ $ ->
   $('.middle__content-slide-wrapper-next').click ->
     nextSlide()
 
-  setInterval(nextSlide, 1000)
+  setInterval nextSlide, 3000
