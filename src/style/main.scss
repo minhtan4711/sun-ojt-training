@@ -660,5 +660,58 @@ body {
 				}
 			}
 		}
+
+		&-blog {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+
+			&-title {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 3rem;
+
+				&--small {
+					text-decoration: underline;
+					cursor: pointer;
+				}
+			}
+
+			&-list {
+				display: flex;
+				justify-content: space-between;
+
+				&-item {
+					width: 32%;
+
+					&-image {
+						margin-bottom: 1rem;
+
+						&:hover {
+							opacity: 0.8;
+							transition: 0.3s all ease;
+						}
+
+						img {
+							width: 100%;
+							border-radius: 20px;
+						}
+					}
+
+					&-author {
+						& > p {
+							line-height: 30px;
+							@include sub-title($sub-title-secondary-color);
+
+							span {
+								color: $text-color;
+								font-weight: 800;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
